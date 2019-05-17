@@ -1,0 +1,5 @@
+package com.first.pafspringboot.model;
+
+public class Client {
+
+}

@@ -1,0 +1,24 @@
+package com.first.pafspringboot.model;
+
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+@Entity
+@Table(name="Client") 
+@EntityListeners(AuditingEntityListener.class)
+public class Client {
+    
+	@Id
+	private int id;
+	
+	private String name;
+	
+	private String amount;
+	
+	private String method;
+	
+}
