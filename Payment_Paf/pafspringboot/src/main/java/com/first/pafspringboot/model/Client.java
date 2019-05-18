@@ -25,6 +25,17 @@ public class Client {
 	@NotBlank
 	private String amount;
 	
+	@NotBlank
+	private String method1;
+	
+	public String getMethod1() {
+		return method1;
+	}
+
+	public void setMethod1(String method1) {
+		this.method1 = method1;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -50,11 +61,11 @@ public class Client {
 	}
 
 	public String getMethod() {
-		return method;
+		return method1;
 	}
 
 	public void setMethod(String method) {
-		this.method = method;
+		this.method1 = method;
 	}
 
 	@NotBlank

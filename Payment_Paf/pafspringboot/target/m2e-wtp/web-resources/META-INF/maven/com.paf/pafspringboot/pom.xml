@@ -50,7 +50,7 @@
             <scope>test</scope>
         </dependency>
 
-		<!-- JSTL for JSP -->
+	
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
@@ -85,15 +85,21 @@
     
     <plugins>
 			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-					<fork>true</fork>
-					<executable>C:\Program Files\Java\jdk1.8.0_201</executable>
-				</configuration>
-			</plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.1.1</version>
+        <executions>
+          <execution>
+            <id>analyze</id>
+            <goals>
+              <goal>analyze-only</goal>
+            </goals>
+            <configuration>
+              <failOnWarning>true</failOnWarning>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
 		</plugins>
   </build>
 </project>
