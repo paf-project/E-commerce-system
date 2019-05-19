@@ -1,0 +1,28 @@
+package com.food.Controller;
+
+@RestController
+@RequestMapping("/company")
+
+public class ItemController {
+	
+	@Autowired
+	ItemDao itemdao;
+	
+	/*------add items-----*/
+	
+	@PostMapping("/Items")
+	public Item addItem(@valid @Requestbody Item item) {
+		return itemdao.save(item);
+	}
+	
+	/*--------List items------*/
+	
+	@GetMapping("/Items")
+	public List<Item> GetAllItems() {
+		return itemdao.findAll();
+	}
+	
+	@
+	
+
+}

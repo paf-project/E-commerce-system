@@ -1,0 +1,30 @@
+package com.food.model;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="Items")
+@EntityListeners(AuditingEntityListners)
+
+public class Item {
+	
+	private ID;
+	private ItemName;
+	private unit_price;
+	private image;
+	private stock;
+	private desc;
+	
+	private int getID() {
+		
+	}
+	
+	public Item() {
+		
+	}
+	public void getItemName() {
+		
+	}
+	
+	public void get
+}

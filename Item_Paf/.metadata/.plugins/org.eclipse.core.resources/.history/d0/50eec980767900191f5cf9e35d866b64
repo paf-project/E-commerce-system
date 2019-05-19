@@ -1,0 +1,62 @@
+package com.food.model;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="Items")
+@EntityListeners(AuditingEntityListners)
+
+public class Item {
+	
+	@Id
+	@GenerateValue(stragregy=GenerationType.AUTO)
+	private int ID;
+	private String ItemName;
+	private float unit_price;
+	private String image;
+	private int stock;
+	private String desc;
+	
+	
+	
+	public Item() {
+		
+	}
+	private int getID() {
+		return ID;
+	}
+	private void setID(int ID) {
+		this.ID = ID;
+	}
+	public String getItemName() {
+		
+	}
+	
+	public void setItemName(String name){
+		this.ItemName = name;
+	}
+	public float getUnit_price() {
+		
+	}
+	public float getUnit_price() {
+		return unit_price;
+	}
+	public void setUnit_price(float price) {
+		this.unit_price = price;
+	}
+	public String getImage() {
+		
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	public Int getStock() {
+		
+	}
+	public void setStock(String desc) {
+		this.desc = desc;
+	}
+	public String getDesc() {
+		return desc;
+	}
+}

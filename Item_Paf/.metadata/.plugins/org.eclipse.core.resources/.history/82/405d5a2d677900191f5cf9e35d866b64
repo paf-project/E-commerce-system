@@ -1,0 +1,8 @@
+package com.food.Repository;
+
+import spingframework
+
+
+public interface ItemRepositaory extends jpaRepository<Item, long>{
+
+}

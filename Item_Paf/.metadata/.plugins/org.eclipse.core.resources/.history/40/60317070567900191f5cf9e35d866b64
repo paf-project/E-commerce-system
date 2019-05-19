@@ -1,0 +1,10 @@
+package com.food.model;
+
+
+@Entity
+@Table(name="Items")
+
+public class Item {
+	
+
+}
