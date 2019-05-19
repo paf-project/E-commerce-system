@@ -1,0 +1,38 @@
+package com.food.Controller;
+
+@RestController
+@RequestMapping("/company")
+
+public class ItemController {
+	
+	@Autowired
+	ItemDao itemdao;
+	
+	/*------add items-----*/
+	
+	@PostMapping("/Items")
+	public Item addItem(@valid @Requestbody Item item) {
+		return itemdao.addItems(item);
+	}
+	
+	/*--------List items------*/
+	
+	@GetMapping("/Items")
+	public List<Item> GetAllItems() {
+		return itemdao.findAll();
+	}
+	
+	/*-----------get item by id-------------*/
+	
+	@GetMapping("/note/{id}")
+	public ResponceEntity<Item> getItemById(@PathVariable (value="id") int itemId){
+		Item item=itemdao.findItem(ItemId);
+		
+		if(item==null) {
+			return RepositoryEntity.notFound().build();
+		}
+		return RepositoryEntity.ok().body(item);
+	}
+	
+
+}

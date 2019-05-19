@@ -1,0 +1,59 @@
+package com.food.Controller;
+
+@RestController
+@RequestMapping("/company")
+
+public class ItemController {
+	
+	@Autowired
+	ItemDao itemdao;
+	
+	/*------add items-----*/
+	
+	@PostMapping("/Items")
+	public Item addItem(@valid @Requestbody Item item) {
+		return itemdao.addItems(item);
+	}
+	
+	/*--------List items------*/
+	
+	@GetMapping("/Items")
+	public List<Item> GetAllItems() {
+		return itemdao.findAll();
+	}
+	
+	/*-----------get item by id-------------*/
+	
+	@GetMapping("/Items/{id}")
+	public ResponceEntity<Item> getItemById(@PathVariable (value="id") int itemId){
+		Item item=itemdao.findItem(ItemId);
+		
+		if(item==null) {
+			return RepositoryEntity.notFound().build();
+		}
+		return RepositoryEntity.ok().body(item);
+	}
+	
+	/*---------update item----------------*/
+	
+	@PutMapping("/Items/{id}")
+	public ResponseEntity<Item> updateItem(@PathVariable (value="id")int itemId,@Valid @RequestBody Item ItemDetails){
+		
+			Item item = itemdao.findItem(itemId);
+		
+			if(item==null){
+				return ResponceEntity.notFound().build();
+			}
+		
+			item.setItemName(ItemDetails.getItemName());
+			item.setUnit_price(ItemDetails.getUnit_price());
+			item.setImage(ItemDetails.getImage());
+			item.setStock(ItemDetails.getStock());
+			item.setDesc(ItemDetails.getDesc());
+		
+			Item updateItem = itemdao.addItems(item);
+			return ResponceEntity.ok().body(updateItem);
+		}
+	}
+
+}

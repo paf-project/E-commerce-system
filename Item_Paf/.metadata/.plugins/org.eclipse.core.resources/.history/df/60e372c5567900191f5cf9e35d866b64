@@ -1,0 +1,11 @@
+package com.food.model;
+
+
+@Entity
+@Table(name="Items")
+@EntityListeners(AuditingEntityListners)
+
+public class Item {
+	
+
+}

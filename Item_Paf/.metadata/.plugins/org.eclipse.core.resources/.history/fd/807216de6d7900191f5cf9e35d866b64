@@ -1,0 +1,28 @@
+package com.food.Dao;
+
+public class ItemDao {
+	
+	@Autowired
+	ItemRepository itemRepo;
+	
+	/-----add Items----/
+	public Item addItems(Item item) {
+		return itemRepository.save(item);
+	}
+	
+	/------List Items---------/
+	public List<Item> findAll(){
+		return itemRepository.findAll();
+	}
+	
+	/-------Find item by id------------/
+	public Item findItem(Int id) {
+		return itemRepository.findItem(id);
+	}
+	
+	/------------remove item-----------/
+	public void DeleteItem(Item item) {
+		itemRepository.delete(item);
+	}
+
+}

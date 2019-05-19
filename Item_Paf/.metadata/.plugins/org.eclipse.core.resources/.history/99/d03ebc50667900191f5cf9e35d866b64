@@ -1,0 +1,6 @@
+package com.food.Repository;
+
+
+public interface ItemRepositaory extends jpaRepository<Item, long>{
+
+}
