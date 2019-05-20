@@ -1,0 +1,15 @@
+package com.food.Dao;
+
+public class ItemDao {
+	
+	@Autowired
+	ItemRepository itemRepo;
+	
+	/-----add Items----/
+	public Item addItems(Item item) {
+		return ItemRepository.save(item);
+	}
+	
+	
+
+}

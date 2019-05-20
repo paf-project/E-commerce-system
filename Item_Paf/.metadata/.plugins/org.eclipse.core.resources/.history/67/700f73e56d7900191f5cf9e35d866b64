@@ -1,0 +1,9 @@
+package com.food.Repository;
+
+import com.food.model;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+public interface ItemRepositaory extends jpaRepository<Item, long>{
+
+}
