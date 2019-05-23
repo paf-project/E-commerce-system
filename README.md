@@ -1,2 +1,3 @@
 # E-commerce-system
-This is about SellNBye e-commerce system. In this repo, there are several documentations and coding related to the system.
+SellNBye e-commerce system is a web application. It is related to online food ordering system. In this repo, there are several documentations and coding related to the system.
+User management, item management,shopping cart management, payment management, delivery management are functionalities of this e-commerce system. As tools and technologies that use for develop this system are Spring MVC framework, hibernate, Java, JSP, Maven, Apache Tomcat server 8.5 and MySQL database. To implement this system, first prepare the enviorment for that by installing Eclipce IDE, installing Apache tomcat server, installing Java JDK tool, downloading Maven and inastall MySQL workbench. 
